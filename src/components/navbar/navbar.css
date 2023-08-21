@@ -9,7 +9,6 @@
   justify-content: space-between;
   background-color: var(--main-bg);
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   & .logo {
     display: flex;
@@ -24,6 +23,11 @@
     align-items: center;
     gap: 20px;
 
+    & .icon {
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
     & .notification {
       position: relative;
       & span {
@@ -57,4 +61,10 @@
       }
     }
   }
+}
+
+.sticky {
+  position: fixed;
+  height: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

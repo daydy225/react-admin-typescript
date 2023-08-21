@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './navbar.css'
+import { useRef } from 'react'
 
 const Navbar: React.FC = () => {
+  const navbarRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    // add scrool event listener to navbar
+    window.addEventListener('scroll', () => {
+      if (navbarRef.current) {
+        if (window.scrollY > 100) {
+          navbarRef.current.classList.add('sticky')
+        } else {
+          navbarRef.current.classList.remove('sticky')
+        }
+      }
+    })
+
+    return () => {
+      // remove scrool event listener from navbar
+      window.removeEventListener('scroll', () => {})
+    }
+  }, [])
+
   return (
-    <div className="navbar">
+    <div
+      className="navbar"
+      ref={navbarRef}
+    >
       <div className="logo">
         <img
           src="logo.svg"

@@ -1,7 +1,7 @@
 import React from 'react'
 import './menu.css'
 import { menuData } from '../../assets/data/menuData'
-import MenuItem from './widgets/menuItems'
+import MenuItem from './widgets/MenuItems'
 
 const Menu: React.FC = () => {
   return (

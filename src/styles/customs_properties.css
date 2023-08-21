@@ -7,4 +7,10 @@
   --main-color: #fff;
   --soft-color: #ddd;
   --dark-color: #2a3447;
+
+  /* media queries */
+  --mobile: 768px;
+  --tablet: 1024px;
+  --desktop: 1200px;
+  --large: 1440px;
 }

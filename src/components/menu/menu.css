@@ -12,6 +12,10 @@
       text-transform: capitalize;
       font-weight: 200;
       color: var(--soft-color);
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
 
     & .listItem {
@@ -23,6 +27,12 @@
 
       &:hover {
         background-color: var(--soft-bg);
+      }
+
+      & .listItemTitle {
+        @media (max-width: 1024px) {
+          display: none;
+        }
       }
     }
   }
